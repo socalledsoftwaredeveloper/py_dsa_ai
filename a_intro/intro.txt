@@ -1,0 +1,40 @@
+### 1. Python?
+ a. It's a high level programming language, used in various fields like (web, automation, AI, data analysis, etc...)
+ b. It supports multi-programming paradigms and also a functional, procedural, object oriented language
+ c. Py is known for it's simplicity, readability and automatic garbage collection
+ d. It has a lot of libraries and inbuilt functions
+
+ > ADVANTAGES:
+   - Open source, Extensive libraries support, dynamic types, and etc...
+
+ > DISADVANTAGES:
+   - Performance issue - Since py is interpreted language it reads line by line and execute the code unlike, compiled programming languages as (C++, Java)
+   - Not ideal for all domains - less suitable for (Frontend dev, embedded, Low level programming, mobile apps)
+   - GIL (Global Interception Lock) - Py is not capable for running multiple threads at once due to it's nature and GIL which prevents it
+   - Memory consumption - sine py is dynamically typed it consumes a lot of memory if the code is not well maintained while running complex algorithms/tasks
+   - Dynamically typed - due to this versatility, it sometimes becomes error prone, and if the variables are not well maintained there is a lot of chances of getting errors
+
+
+### PYTHON RULES:
+ a. No semicolon (;) at the end of the statement for single statement and, at some point of time we san still use semicolon if we use multiple continuous prints statements at the same line like -> print("Hai"); print("I'm an AI engineer); print("Good Start");
+
+
+### 2. Py Comments:
+ a. Generally comments are useful for understanding about the usage of particular lines, We can give a single line comment or multi line comments
+ > SING LINE COMMENT: # Hello this is single line comment
+ > MULTI LINE COMMENT: """ ... .... .... """ (assume ... are next next lines)
+
+
+### 3. Py line Indention:
+ a. Indention is nothing but a white space before the beginning of our code line
+ b. In other programming/scripting languages the white space are used for readability but, IN PY IT REFERS TO A BLOCK OF CODE. We can use white space up-to 4 or less but not greater than 4
+ > E.g;
+    if age >= 18
+     print("User is eligible to VOTE) # used 1 space
+
+
+### 4. Py Statements?
+ a. Statements are nothing but a line of code which is, a programming instruction that we used to run/execute in a computer
+ b. We might have 1 statement or many lines of statements
+
+

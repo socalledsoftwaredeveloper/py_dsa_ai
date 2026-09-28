@@ -1,0 +1,118 @@
+1. STRING
+* Anything with-in single/double quotes are considered as STRING. it has a length to read no.of characters
+    1. For single line string we use ""/''
+    2. For multiline string we use ''''''/""""""""
+* Strings characters can also be accessible via index
+* Slice - we can even slice string using str_name[START:END]
+* We can even loop the string using loop
+* Strings are IMMUTABLE and can't be changed post creation. Any modification to a string creates a new string instead of altering the original one
+* We can DELETE a string using the keyword "del STRING_NAME"
+* We can UPDATE a string but to update it we must use another variable and make operations accordingly since STRINGS are immutable
+
+* COMMON STRING METHODS:
+  a. upper(), lower()
+  b. slice, replace
+  c. len
+  d. strip() - remove spaces
+  e. capitalize
+  f. split
+  g. join, find, count, startsWith
+* CONCATENATING STRINGS
+  a. string1 + string 2
+  b repeat a string -> (stringName * 3)
+* FORMATTING A STRING
+  a. f-string : allows to directly insert variables and expressions inside a string using {} brackets.
+  b. format : it allows inserting values into placeholders {} inside a string.
+  c. check if a word is present in line -> (word in StringName) and this returns boolean
+
+
+
+2. LIST - []
+* List is capable of storing any kind data type in terms of array. They are ordered and the list items can be added, updated or removed from the array. We can access the list items with index value / or it can be looped and accessed
+* List are object referenced where they store their value in memory address and they don't store their values directly. Modifying this mutable object changes the original object and to avoid this we can reference to a new object and make changes accordingly so the old object will nor be changed
+
+* LIST CREATION:
+  It can be created in 3 ways
+  a. using square brackets usual way - fruits = ["apple", "orange", "grapes"]
+  b. list constructor - ((11,12,13,"a","b","c","max",3.3,4.4))
+  c. creating list with repeated elements - vals = [2]*5 -> this will produce array with value 2 as 5 times like; [2,2,2,2,2]
+
+* LIST ADD ELEMENTS
+  a. append - 1 element can be added
+  b. insert - insert 1element at specific index position, 
+  c. extend - add multiple elements
+* LIST REMOVE ELEMENTS
+  a. remove - removes 1st occurrence from the list
+  b. pop - remove item at specific position, if index is not specified then, it removes the last element by default
+  c. del keyword - removes index based item from the list
+* LIST UPDATE ELEMENTS
+  a. This can be updated using index access
+
+# ITERATION of LIST
+* We can iterate the list using loops (for, while, do-while). This is applicable for normal array and nested array
+* We can also access array items as index based, which is applicable for normal array and nested array
+
+
+
+3. TUPLE - ()
+* Tuples are ordered and immutable(can't be changed) and they are represented with circle brackets. They do hold any no.of data types
+* Tuples can be created in 3 ways
+  a. fruits = (11,12,3)
+  b. colors = tuple("a","b","c")
+  c. USING LIST - country = ["india","china","japan"]
+                  print(tuple(country))
+* Tuple - We can do SLICE operations
+* Tuple - We can concatenate 2 tuples using "+"
+* Tuple - We can also delete the tuple using "del" keyword
+* Tuple - We can pack/unpack the tuple items (NOTE: This is same like extracting items from the array/object in JS). Also while extracting we might use "*", which means we would extract a set of multiple items as a LIST
+
+
+
+4. DICTIONARY - {key:value}
+* Dict are key value pairs, where as the key should be unique and it is immutable but, value can be of anything and they are mutable. Dict is same like object in JS
+* Dict can bve created in 2 ways:
+  a. normal way -> DICT_VAR = {KEY:VALUE, KEY:VALUE, NESTED_DICT: {KEY: VALUE}}
+  b. using dict built-in-func -> DICT_VAR = dict(KEY=VALUE, KEY=VAL)
+* We can add, update dict
+* We can remove dict using 4 ways;
+  a. del keyword
+  b. pop()
+  c. popitem()
+  d. clear()
+* We can also loop through the dict using for and specifically access its (key, value or both)
+
+
+
+5. SETS - {value1, val2, val3}
+* sets will hold only the unique values and they are capable of storing heterogenous data(any data types). They are also un-ordered & immutable(can't be changed) but, it we can still use methods like (add, remove) and cannot be accessed via index values
+* sets can be created in 2 ways;
+  a. normal way - names = {"a","b","c"}
+  b. using set keyword and this is capable of converting other sequence of items like (LIST, TUPLE) into set - users = set(["d","e","f"])
+* sets cannot be looped
+* We have some methods of sets like;
+  a. add()
+  b. union()
+  c. intersection()
+  d. difference()
+  f. clear()
+* We do have other sets like;
+  a. set() - Sets cannot have duplicate values. While you cannot modify the individual elements directly, you can still add or remove elements from the set.
+  b. frozenset() - Frozensets are immutable, so methods like add() or remove() cannot be used. They are also hashable, which allows them to be used as dictionary keys.
+* SETS - they are implemented using hash-table in python. where the set elements are stored as keys with dummy values. If multiple elements map to the same index, Python handles the collision by storing them in the same bucket.
+* This chaining mechanism helps efficiently handle collisions, allowing multiple elements to exist at the same hash index without overwriting each other.
+  e.g  HASH TABLE
+      0   0(index vals)
+      1   1
+      2   2 -> val1 -> val2 // LINKED LIST same bucket handling
+      3   3
+      4   4
+      etc...
+
+
+
+6. ARRAYS
+* Py have a variety no.of ways top work with sequence of items. Ideally like in other programming language python does not have built-in array but, similar functionalities can be achieved using (LIST, TUPLE, numpy(library))
+* We have already seen about LIST - brushup by scrolling top
+* NUMPY - numpy library comes more handy when we deal with large data set with heavy and complex computational tasks where matrics and other things involved
+* Arrays in py are used to store homogeneous data(same type) and in a contagious memory and this is really fast because the address would be in sequence which leads us to fast manipulation and data retrieval but, LISTS are heterogenous capable of storing mixed types and non-contagious since it has diff data-types.
+* List are require a typecode during initialization to define the data type.

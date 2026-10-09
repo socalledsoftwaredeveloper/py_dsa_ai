@@ -1,0 +1,2 @@
+  eda -> clean, train 80/20 lora algo/rag algo we can use in business use case
+  spykit, tensorflo, pytorch, sykitland

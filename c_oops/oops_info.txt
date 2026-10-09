@@ -1,0 +1,72 @@
+1.OOPS
+  * oops is a standard way where the developers used to write, maintain, organize and reuse the code in cleaner way.
+  * With OOPS we can build application in lesser code without DRY concept
+  * We have 6 primary and core concepts in OOPS
+    a. CLASS - main root, this is our template engine, from here we create objects
+    b. OBJECT - instances of class (assume from class(model) we create obj which has all characterizes)
+    c. INHERITANCE - Used for code reusability from existing class instead of creating again the same one
+    d. ENCAPSULATION - We prevent and protect the direct access of our data
+    e. ABSTRACTION - hide unnecessary details
+    f. POLYMORPHISM - It allows same methods to behave differently
+
+2. CLASS
+  * Class can be created with default attributes or with constructor way(recommended)
+  * Class will have __init__ method and here is where the CLASS is being initiated. This is much useful for the object which is being instantiated from class model so that they can create object with required initial values
+  * We can't introduce any params directly into the class itself unless it is another class
+
+  SUPER KEYWORD: This super().__init__(BaseClassAttributeName) - This is used in the child OBJECT and let's say if we define a class A and class B and class B should use some of the attributes that is present in class A then super() is the way to go
+
+3. OBJECT
+  * Object is an instance that is created from the main parent class
+  * Object will have access to all the properties and methods available in parent base class and also it might have its own properties and methods defined
+  * Basically, we will be reusing the properties/methods instead of creating again and again
+
+4. INHERITANCE
+  * Inheritance - in simpler words, the reuse of existing properties and methods from BASE class to DERIVED/CHILD class is called inheritance
+  * Best for reusability and it models real-world scenarios in hierarchical pattern
+
+  METHOD OVERRIDING - It allows the Child class to define a method and implement with same name that exist in parent class. This enables customized behavior while still maintaining the inheritance relationship
+
+5. POLYMORPHISM
+  * same method but behaves differently
+  * We have 2 types of polymorphism such has
+     a. Compile-time(method overloading) -> I know what you mean before running
+     b. Runtime(method overriding) -> I'll figure out what you mean while running (Here function doesn't need to know but, the actual object which would get called will determine it)
+  * Like the way Java we can't us the methods with same name in same class and if we even use like that in Python, the 2nd method will replace the first one. Instead, we have to use with the (*args)
+  * polymorphism can do different task in OPERATIONS based on its operand type
+  * Eg: Below code shows operator polymorphism as + operator behaves differently based on data types adding integers, concatenating strings and merging lists all using same operator.
+    print(5 + 10)  # Integer addition
+    print("Hello " + "World!")  # String concatenation
+    print([1, 2] + [3, 4])  # List concatenation
+
+6. ENCAPSULATION
+  * Encapsulation is the preventing/restricting the access of the data using access specifiers like (PUBLIC, PROTECTED and PRIVATE) also, it helps in better maintainability, readability and usability
+  * NOTE: In py PRIVATE(__) - it is not truly private where it prevent access instead, it is called as (Name-mangling) and it is used for preventing name conflicts
+  * Access specifiers and its usage
+     a. PUBLIC - All attributes by default in py is public unless we use (_ or __). Public can be access anywhere(own class, sub-class or the object)
+     b. PROTECTED - Usage of single underscore _ (can be accessed in both  main & its sub-class)
+     c. PRIVATE - Usage of double underscore __ (can be access within main class) But, (USING NAME MANGLING WE CAN STILL ACCESS EVEN FROM OBJECT)
+
+  NAME MANGLING - __NAMEMANGLING
+    * Syntax usage worth to remember
+      a. __name__ : dunder/special method
+      b. __name : name mangling
+      c. _name : protected variable
+
+  GETTERS SETTERS:
+    * In Python, getter and setter methods are used to access and modify private attributes safely. Instead of accessing private data directly, these methods provide controlled access, allowing you to:
+      a. Read data using a getter method.
+      b. Update data using a setter method with optional validation or restrictions.
+
+7. ABSTRACTION
+  * Abstraction means exposing what an object can do while hiding the implementation details of how it does it
+  * Define the abstract method in parent, so that the child class which is inheriting base class will be implementing this concrete method and this is the rule
+  * Think Abstraction like, the developer struggles to complete the task with his efforts, late night and workaholic ethics but the leadership always cares about end goal(is the ticket DONE?)
+  * We have to import from ABC (Abstract Base Class) and use to make abstract method or abstract property
+
+ABSTRACT METHOD - @abstractmethod - WHAT to do instead of HOW TO DO?
+  * Abstract method - it is a method that the parent class declares but requires child classes to implement. In case if the child which is inheriting parent which has abstract method fails to implement then we'll get error
+
+ABSTRACT PROPERTY - @property - I should be provided with INFO
+  * Abstract Property - It let you to access method like an attribute (E.g; instead of a.speak() we would access it like a.speak)
+  * Mostly, the abstract property will combine with abstract method

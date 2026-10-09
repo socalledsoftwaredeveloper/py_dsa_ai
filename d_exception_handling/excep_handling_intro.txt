@@ -1,0 +1,17 @@
+1.EXCEPTION HANDLING
+  * Exception handling is used for safe handling the failures instead of crashing our app because of unexpected error, file missing, wrong input or wrong data type.
+  * Because of this exception handling implementation the end user would know the actual cause and he/she will take action accordingly
+  * Exception handling RULES:
+    a. TRY - This will have the code which might fail
+    b. EXCEPT - Catches and handles the error if one occurs (divisibility error, type error, etc...)
+    c. ELSE - Executes only if no exception occurs in try
+    d. FINALLY - This will run regardless of PASS/FAIL
+  * CATCHING EXCEPTION - Here we can respond to the bug and act accordingly, it might be either;
+    a. SPECIFIC EXCEPTION
+    b. MULTIPLE EXCEPTION
+    c. CATCH ALL HANDLERS
+  * RAISE AN EXCEPTION - SYNTAX: raise ExceptionType("Error message")
+    - We can raise an exception with the keyword "raise" followed by the instance of exception class that we want to trigger. Also here, we can define our own exception or use built-in Error class
+  * ERROR vs EXCEPTION - They both are bug in the code and has different meaning;
+    a. Error: Issues in the program logic such as SyntaxError, etc. OCCURS at COMPILE TIME.
+    b. Exception: Problems that OCCUR AT RUNTIME and can be managed using exception handling (e.g., invalid input, missing files).

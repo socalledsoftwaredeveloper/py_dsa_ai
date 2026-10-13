@@ -1,0 +1,25 @@
+1. FILE HANDLING
+  * File handling is a process of preforming the operations such as;
+    OPEN - before performing read we have to open() the file and if we don't give file operation then by default it takes "READ" operation
+    READ
+    WRITE/UPDATE/APPEND
+    DELETE
+    CLOSE - using "with" in file open we don't even need close() because it automatically does that part
+  * We can perform the operations using a program interface that communicates between our file system and our storage device
+
+2. FILE MODES:
+  "r"	- Opens a file for reading (default mode)
+  "w"	- Opens a file for writing and overwrites existing content
+  "a"	- Opens a file for appending content
+  "x"	- Creates a new file and raises an error if it already exists
+  "b"	- Opens a file in binary mode
+  "t"	- Opens a file in text mode (default)
+
+3. FILE OPERATIONS;
+  a. open("FILE_NAME", "FILE_OPERATION") - NOTE: if we don't give file operation then by default it takes "READ" operation. Always try to close the file after any operation to free up the resource
+
+4. FILE TYPES;
+  * We can read almost any file types like (plain text, csv, json, binary, etc...)
+
+5. FILE READ WAYS - Py provides many no.of ways to perform reading like;
+  a. 

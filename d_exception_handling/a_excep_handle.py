@@ -24,7 +24,7 @@ try:
     vals = "str" # In case the value is given as 0 then we would get ZeroDivision error
     res = 10/vals
 except TypeError:
-    print(f"Please enter a valid type to make division: {vals} is not correct type")
+    print(f"Please enter a valid type to make division: {vals} is not correct type to divide 10")
 except ZeroDivisionError:
     print(f"Unable to divide string type with number type")
 
@@ -65,3 +65,32 @@ try:
     checkEligible(17)
 except ValueError as e:
     print("Error: ", e)
+
+
+
+# CUSTOM EXCEPTION
+class CustomException(Exception): # inherit the base Exception from py library
+    def __init__(self, message, errCode):
+        super().__init__(message) # passes the message to the base exception class.
+        self.message = message
+        self.errCode = errCode
+    def __str__(self): # message to print the err
+        return(f"{self.message}, Error Code: {self.errCode}")
+
+err = CustomException("User is unauthorized", 403)
+print(err)
+
+# RAISING CUSTOM EXCEPTION - make sure the name should be same
+class MyCustomException(Exception): 
+    pass
+def divideNow(a,b):
+    if b == 0:
+        raise MyCustomException(f"can't divide {b} with {a}")
+    print(f"Result is: {a/b}")
+    return a/b
+
+try:
+    divideNow(4, 0) # try changing the b value and see the terminal output
+except MyCustomException as e:
+    print(e)
+    

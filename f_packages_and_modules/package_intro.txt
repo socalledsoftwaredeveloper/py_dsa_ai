@@ -1,0 +1,14 @@
+1. PACKAGE:
+  * Package is used for organizing our codebase. As we know py is unstructured we can arrange it properly using (MODULE, PACKAGE and SUB-PACKAGE)
+    a. MODULE - a sing file contains a reusable code (e.g; math.py)
+    b. PACKAGE - a directory that contains module and more than 1 file and a special file named __init__.py
+    c. SUB-PACKAGE - contains many PACKAGE where 1 PACKAGE is nested with other PACKAGE for deeper organization
+
+2. MODULES TYPES; we have a set of modules such as;
+  a. BUILT-IN MODULE - no installation is required, directly we can use them
+  b. USER DEFINED MODULE - These are created by ourself like (math.py, calc.py)
+  c. 3rd PARTY/EXTERNAL MODULE - required installation using pip
+  d. PACKAGE MODULE - These are the directory contains nested modules
+
+3. Locating MODULES?
+  * Py provides a standard way to view all the files using list where we can loop and view the path by sys.path

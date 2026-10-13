@@ -22,4 +22,6 @@
   * We can read almost any file types like (plain text, csv, json, binary, etc...)
 
 5. FILE READ WAYS - Py provides many no.of ways to perform reading like;
-  a. 
+  a. using Loop and strip()
+  b. readlines()
+  c. file.read()
